@@ -1,0 +1,19 @@
+reply_code_id,reply_code
+0,No error
+1,FormErr
+2,ServFail
+3,NXDomain
+4,NotImp
+5,Refused
+6,YXDomain
+7,YXRRSet
+8,NXRRSet
+9,NotAuth
+10,NotZone
+16,BADVERS
+16,BADSIG
+17,BADKEY
+18,BADTIME
+19,BADMODE
+20,BADNAME
+21,BADALG
