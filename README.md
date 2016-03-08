@@ -5,6 +5,20 @@ field extractions, aliases and tags for the following Bro IDS log outputs:
 
 * conn.log
 * dns.log
+* ssl.log
+* x509.log
+
+This fills the following panels in Splunk Enteprise Security:
+
+* Traffic Center
+* DNS Activity
+* SSL Activity
+
+![Splunk ES Traffic Center](splunk_es_traffic_center.png)
+
+![Splunk ES DNS Activity](splunk_es_dns_activity.png)
+
+![Splunk ES SSL Activity](splunk_es_ssl_activity.png)
 
 ## Installation
 
@@ -13,16 +27,14 @@ rename it TA-bro-ids otherwise ES won't eat it. Though not strictly necessary,
 you can also install this TA on your Splunk indexers to make sure timestamp
 extraction is as efficient as possible, and no line merging will take place.
 
+Install and configure Bro IDS, together with Splunk Universal Forwarder.
+
 ## Configuration
 
 Have the Bro log files indexed by a Splunk Universal Forwarder. For example
 with the following inputs.conf:
 
 ```
-#
-# Bro IDS Inputs
-#
-
 [monitor:///opt/bro/spool/bro/conn.log]
 disabled = 0
 sourcetype = bro_conn
@@ -31,6 +43,16 @@ index=bro
 [monitor:///opt/bro/spool/bro/dns.log]
 disabled = 0
 sourcetype = bro_dns
+index=bro
+
+[monitor:///opt/bro/spool/bro/ssl.log]
+disabled = 0
+sourcetype = bro_ssl
+index=bro
+
+[monitor:///opt/bro/spool/bro/x509.log]
+disabled = 0
+sourcetype = bro_x509
 index=bro
 ```
 
