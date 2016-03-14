@@ -11,10 +11,13 @@ field extractions, aliases and tags for the following Bro IDS log outputs:
 This fills the following panels in Splunk Enteprise Security:
 
 * Traffic Center
+* Traffic Size Analysis
 * DNS Activity
 * SSL Activity
 
 ![Splunk ES Traffic Center](splunk_es_traffic_center.png)
+
+![Splunk ES Traffic Size Analysis](splunk_es_traffic_size.png)
 
 ![Splunk ES DNS Activity](splunk_es_dns_activity.png)
 
