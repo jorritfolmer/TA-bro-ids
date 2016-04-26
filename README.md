@@ -1,7 +1,8 @@
 # TA-bro-ids for Splunk
 
 This CIM compliant TA can be used with Splunk Enterprise Security and provides
-field extractions, aliases and tags for the following Bro IDS log outputs:
+field extractions, aliases and tags. Onboarding Bro data simply requires a
+Splunk Universal Forwarder that monitors the following Bro IDS log outputs:
 
 * conn.log
 * dns.log
